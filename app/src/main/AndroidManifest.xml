@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +16,27 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AndroidSurfaceViewActivity"
             android:screenOrientation="landscape">
+
+        </activity>
+
+        <activity
+            android:name="com.ashutosh.entropikarapp.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ashutosh.entropikarapp.Settings"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/title_activity_settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" >
         </activity>
     </application>
 
